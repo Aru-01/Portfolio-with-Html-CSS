@@ -3,13 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Site</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-      crossorigin="anonymous"
-    />
+    <title>Aru | Portfolio Site</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -19,523 +14,524 @@
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-black container mx-auto">
-    <!-- header part -->
-    <header>
-      <!-- navbar  -->
-      <nav style="margin-bottom: 3rem" class="navbar navbar-expand-lg mx-auto">
-        <div class="container mx-auto">
-          <!-- Logo  -->
-          <a class="navbar-brand text-white fs-2 hover-effect" href="#"
-            ><i class="fa-solid fa-a"></i
-          ></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Menu  -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-4 align-items-center">
-              <li class="nav-item">
-                <a class="nav-link text-white hover-effect" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white hover-effect" href="#about-me"
-                  >About Me</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white hover-effect" href="#skills"
-                  >My Skills</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white hover-effect" href="#contact"
-                  >Contact Me</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  href="assets/cv/arif_resume.pdf"
-                  download
-                  class="btn btn-outline-info fs-4"
-                >
-                  Resume <i class="fa-solid fa-arrow-down"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <body class="bg-black text-white">
+    <!-- header -->
+    <header class="container mx-auto px-4">
+      <!-- navbar -->
+      <nav class="flex flex-wrap items-center justify-between py-4">
+        <!-- Logo -->
+        <a class="text-white text-2xl font-bold hover:text-blue-400" href="#"
+          >Aru</a
+        >
+        <!-- Menu button for mobile -->
+        <button id="nav-toggle" class="text-white text-2xl md:hidden">
+          <i class="fas fa-bars"></i>
+        </button>
+        <!-- Menu items -->
+        <ul id="nav-menu" class="hidden md:flex space-x-6 items-center text-lg">
+          <li><a class="hover:text-blue-400" href="#">Home</a></li>
+          <li><a class="hover:text-blue-400" href="#about-me">About Me</a></li>
+          <li><a class="hover:text-blue-400" href="#skills">My Skills</a></li>
+          <li><a class="hover:text-blue-400" href="#contact">Contact Me</a></li>
+          <li>
+            <a
+              href="assets/cv/MD_Ariful_Islam_resume.pdf"
+              download
+              class="border border-blue-400 px-4 py-2 rounded hover:bg-blue-400 hover:text-black transition"
+            >
+              Resume <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </li>
+        </ul>
       </nav>
-      <!-- navbar end  -->
 
-      <!-- banner  -->
-      <section id="about-me">
-        <div class="card mb-3 border-0 bg-transparent">
-          <div class="row g-0 align-items-center">
-            <div class="col-md-8">
-              <div class="card-body text-white">
-                <h5 style="font-size: large" class="card-title fs-1">Hi!</h5>
-                <h5 class="card-title typewriter fs-3">I'm Ariful Islam</h5>
-
-                <p class="card-title fw-bold fs-4">
-                  React Developer | Web Developer
-                </p>
-
-                <p class="card-text fs-5">
-                  I’m a frontend web developer with skills in HTML, CSS,
-                  JavaScript, and React.js. I also have basic knowledge of
-                  backend technologies like Node.js and MongoDB. Besides web
-                  development, I know C/C++ and enjoy competitive programming.
-                  I’m a Codeforces Pupil and a 3-star coder on CodeChef, and I
-                  take part in coding contests regularly. I have a basic
-                  understanding of DBMS, and I’m currently planning to learn
-                  Python and Django to grow as a full-stack developer.
-                </p>
-
-                <p class="card-text d-flex gap-3 align-items-center">
-                  <a href="https://github.com/Aru-01" target="_blank">
-                    <i class="fa-brands fa-github fs-2 hover-effect"></i>
-                  </a>
-                  <a href="https://www.linkedin.com/in/aru01/" target="_blank">
-                    <i class="fa-brands fa-linkedin fs-2 hover-effect"></i>
-                  </a>
-                  <a href="https://www.facebook.com/Aru.0012/" target="_blank">
-                    <i class="fa-brands fa-facebook fs-2 hover-effect"></i>
-                  </a>
-                  <a
-                    href="assets/cv/arif_resume.pdf"
-                    download
-                    class="btn btn-outline-info ms-3 fs-4"
-                  >
-                    Resume <i class="fa-solid fa-arrow-down"></i>
-                  </a>
-                </p>
-              </div>
+      <!-- banner -->
+      <section id="about-me" class="mt-12">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <!-- text -->
+          <div class="md:w-2/3 space-y-4">
+            <h5 class="text-4xl font-bold">Hi!</h5>
+            <h5 class="text-2xl typewriter">I'm Ariful Islam</h5>
+            <p class="text-xl font-semibold">
+              Backend Developer | Django Developer
+            </p>
+            <p class="text-lg">
+              Motivated entry-level backend developer with a solid foundation in
+              Python, Django, and Django REST Framework (DRF). Skilled in
+              designing RESTful APIs, managing databases, and building efficient
+              server-side logic. Familiar with front-end technologies like HTML,
+              CSS, Tailwind CSS, and React for smooth integration with backend.
+              Experienced with MySQL and Git. Passionate about learning new
+              technologies and planning to expand into modern frontend
+              development with TypeScript and Next.js.
+            </p>
+            <div class="flex items-center gap-4">
+              <a href="https://github.com/Aru-01" target="_blank">
+                <i class="fa-brands fa-github text-3xl hover:text-blue-400"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/aru01/" target="_blank">
+                <i
+                  class="fa-brands fa-linkedin text-3xl hover:text-blue-400"
+                ></i>
+              </a>
+              <a href="https://www.facebook.com/Aru.0012/" target="_blank">
+                <i
+                  class="fa-brands fa-facebook text-3xl hover:text-blue-400"
+                ></i>
+              </a>
+              <a
+                href="assets/cv/MD_Ariful_Islam_resume.pdf"
+                download
+                class="border border-blue-400 px-4 py-2 text-xl rounded hover:bg-blue-400 hover:text-black transition ml-4"
+              >
+                Resume <i class="fa-solid fa-arrow-down"></i>
+              </a>
             </div>
-            <div class="col-md-4">
-              <img
-                src="assets/img/arif-img.jpg"
-                class="img-fluid rounded-start"
-                alt="Arif Image"
-              />
-            </div>
+          </div>
+          <!-- image -->
+          <div class="md:w-1/3">
+            <img
+              src="assets/img/Arif-professional-img.png"
+              alt="Arif Image"
+              class="rounded-lg w-full"
+            />
           </div>
         </div>
       </section>
     </header>
-    <!-- header part end -->
 
-    <!-- portfolio   -->
-    <section id="portfolio" style="margin-top: 6rem" class="">
-      <h2 class="text-center text-white fs-2">Portfolio</h2>
-      <div class="mx-auto hr"></div>
-      <div class="mt-5">
-        <div
-          class="card mb-3 mx-auto bg-transparent p-3 rounded-5 border-1 border-info text-white"
-          style="max-width: 950px"
-        >
-          <div class="row g-0 align-items-center">
-            <div class="col-md-7">
-              <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="0"
-                    class="active"
-                    aria-current="true"
-                    aria-label="Slide 1"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"
-                  ></button>
-                  <button
-                    type="button"
-                    data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide-to="2"
-                    aria-label="Slide 3"
-                  ></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img
-                      src="assets/portfolio/Project-2/img1.png"
-                      class="d-block w-100"
-                      style="height: 300px; object-fit: cover"
-                      alt="img-1"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="assets/portfolio/Project-2/img2.png"
-                      class="d-block w-100"
-                      style="height: 300px; object-fit: cover"
-                      alt="img-2"
-                    />
-                  </div>
-                  <div class="carousel-item">
-                    <img
-                      src="assets/portfolio/Project-2/img3.png"
-                      class="d-block w-100"
-                      style="height: 300px; object-fit: cover"
-                      alt="img-3"
-                    />
-                  </div>
-                </div>
-                <button
-                  class="carousel-control-prev"
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-            </div>
-            <div class="col-md-5">
-              <div class="card-body">
-                <h5 class="card-title fs-2 fw-bold">
-                  Event-Management
-                  <a
-                    href="https://github.com/Aru-01/Event-Management-Project"
-                    target="_blank"
-                    class="text-white ms-3"
-                    aria-label="GitHub Repository"
-                  >
-                    <i class="fab fa-github fs-6"></i>
-                  </a>
-                  <a
-                    href="https://event-management-assignm-e9c86.web.app/"
-                    target="_blank"
-                    class="text-white ms-3"
-                    aria-label="Live Project"
-                  >
-                    <i class="fa-solid fa-link fs-6"></i>
-                  </a>
-                </h5>
-
-                <p class="card-text fs-5">
-                  User registration has been added, allowing users to sign up
-                  and create an account. The website also supports **Google
-                  login**, enabling users to log in seamlessly with their Google
-                  account. Users can explore the website without logging in, but
-                  logging in grants access to **extra routes** with additional
-                  features. By clicking on any card, users will be directed to a
-                  **details page** to view more information. All data on the
-                  website is **dynamically loaded from an API**, ensuring the
-                  most up-to-date content is displayed.
-                </p>
-                <p class="card-text d-flex flex-wrap gap-2 ms-md-4 mt-2">
-                  <span class="badge fs-6 bg-info text-dark me-2">React</span>
-                  <span class="badge fs-6 bg-info text-dark me-2"
-                    >Tailwind</span
-                  >
-                  <span class="badge fs-6 bg-info text-dark me-2">Node.js</span>
-                  <span class="badge fs-6 bg-info text-dark me-2">MongoDB</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        class="card mb-3 mx-auto bg-transparent p-3 rounded-5 border-1 border-info text-white"
-        style="max-width: 950px"
-      >
-        <div class="row g-0 align-items-center">
-          <div class="col-md-7">
-            <div id="carouselExampleIndicators" class="carousel slide">
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="assets/portfolio/Project-1/img1.png"
-                    class="d-block w-100"
-                    style="height: 300px; object-fit: cover"
-                    alt="img-1"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/portfolio/Project-1/img2.png"
-                    class="d-block w-100"
-                    style="height: 300px; object-fit: cover"
-                    alt="img-2"
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="assets/portfolio/Project-1/img3.png"
-                    class="d-block w-100"
-                    style="height: 300px; object-fit: cover"
-                    alt="img-3"
-                  />
-                </div>
-              </div>
-              <button
-                class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev"
-              >
-                <span
-                  class="carousel-control-prev-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button
-                class="carousel-control-next"
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next"
-              >
-                <span
-                  class="carousel-control-next-icon"
-                  aria-hidden="true"
-                ></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-          <div class="col-md-5">
-            <div class="card-body">
-              <h5 class="card-title fs-2 fw-bold">
-                EduTech Genius
-                <a
-                  href="https://github.com/Aru-01/EduTech_Genius-Client-side"
-                  target="_blank"
-                  class="text-white ms-3"
-                  aria-label="GitHub Repository"
-                >
-                  <i class="fab fa-github fs-5"></i>
-                </a>
-                <a
-                  href="https://edutechgenius-5801e.web.app/"
-                  target="_blank"
-                  class="text-white ms-3"
-                  aria-label="Live Project"
-                >
-                  <i class="fa-solid fa-link fs-5"></i>
-                </a>
-              </h5>
-
-              <p class="card-text fs-5">
-                This website allows users to view all available classes,
-                register and sign in easily, and purchase classes using any
-                card. Users can apply to become teachers, and dashboards are
-                available for users, teachers, and admins. Admins can manage all
-                users, approve or reject teacher requests, and control class
-                approvals. Built with basic JavaScript, it offers a smooth and
-                interactive experience.
-              </p>
-              <p class="card-text d-flex flex-wrap gap-2 ms-md-4 mt-2">
-                <span class="badge fs-6 bg-info text-dark me-2">React</span>
-                <span class="badge fs-6 bg-info text-dark me-2">Tailwind</span>
-                <span class="badge fs-6 bg-info text-dark me-2">Node.js</span>
-                <span class="badge fs-6 bg-info text-dark me-2">MongoDB</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- portfolio  end -->
-
-    <!-- Skills & Education Section -->
-    <section id="skills" style="margin-top: 6rem" class="container my-5">
-      <div class="row gy-5 align-items-center">
+    <!-- Skills & Education -->
+    <section id="skills" class="container mx-auto mt-16">
+      <div class="grid md:grid-cols-2 items-center">
         <!-- Skills -->
-        <div class="col-12 col-md-6 text-white">
-          <h2 class="text-center fs-2">My Skills</h2>
-          <div class="mx-auto hr"></div>
+        <div class="flex justify-center items-center">
+          <div class="max-w-xl mx-auto w-full">
+            <h2 class="text-3xl text-center font-bold">My Skills</h2>
+            <div class="mx-auto my-2 w-24 h-1 bg-blue-500 rounded"></div>
 
-          <!-- Expertise -->
-          <h3 class="fs-4 mt-4">Expertise:</h3>
-          <div class="d-flex flex-wrap gap-2 ms-md-4 mt-2">
-            <span class="badge fs-5 text-bg-info">HTML</span>
-            <span class="badge fs-5 text-bg-info">CSS</span>
-            <span class="badge fs-5 text-bg-info">JS</span>
-            <span class="badge fs-5 text-bg-info">Tailwind CSS</span>
-            <span class="badge fs-5 text-bg-info">Bootstrap</span>
-          </div>
+            <div class="mb-7">
+              <div class="flex justify-between py-1">
+                <span
+                  class="text-base text-gray-lite font-semibold dark:text-[#A6A6A6]"
+                  >HTML | CSS | Tailwind CSS
+                </span>
+                <span
+                  class="text-base font-semibold text-gray-lite pr-5 dark:text-[#A6A6A6]"
+                  >95%</span
+                >
+              </div>
+              <svg
+                class="rc-progress-line"
+                viewBox="0 0 100 1"
+                preserveAspectRatio="none"
+              >
+                <path
+                  class="rc-progress-line-trail"
+                  d="M 0.5,0.5
+         L 99.5,0.5"
+                  stroke-linecap="round"
+                  stroke="#D9D9D9"
+                  stroke-width="1"
+                  fill-opacity="0"
+                ></path>
+                <path
+                  class="rc-progress-line-path"
+                  d="M 0.5,0.5
+         L 99.5,0.5"
+                  stroke-linecap="round"
+                  stroke="#9272D4"
+                  stroke-width="1"
+                  fill-opacity="0"
+                  style="
+                    stroke-dasharray: 94.05px, 100px;
+                    stroke-dashoffset: 0px;
+                    transition: stroke-dashoffset 0.3s ease 0s,
+                      stroke-dasharray 0.3s ease 0s, stroke 0.3s linear 0s,
+                      0.06s;
+                  "
+                ></path>
+              </svg>
+            </div>
 
-          <!-- Comfortable -->
-          <h3 class="fs-4 mt-4">Comfortable:</h3>
-          <div class="d-flex flex-wrap gap-2 ms-md-4 mt-2">
-            <span class="badge fs-5 text-bg-info">React</span>
-            <span class="badge fs-5 text-bg-info">C</span>
-            <span class="badge fs-5 text-bg-info">C++</span>
-            <span class="badge fs-5 text-bg-info">Material UI</span>
-          </div>
+            <div class="my-7">
+              <div class="flex justify-between py-1">
+                <span
+                  class="text-base text-gray-lite font-semibold dark:text-[#A6A6A6]"
+                  >C | C++ | Python | Javascript</span
+                >
+                <span
+                  class="text-base font-semibold text-gray-lite pr-5 dark:text-[#A6A6A6]"
+                  >80%</span
+                >
+              </div>
+              <svg
+                class="rc-progress-line"
+                viewBox="0 0 100 1"
+                preserveAspectRatio="none"
+              >
+                <path
+                  class="rc-progress-line-trail"
+                  d="M 0.5,0.5
+         L 99.5,0.5"
+                  stroke-linecap="round"
+                  stroke="#D9D9D9"
+                  stroke-width="1"
+                  fill-opacity="0"
+                ></path>
+                <path
+                  class="rc-progress-line-path"
+                  d="M 0.5,0.5
+         L 99.5,0.5"
+                  stroke-linecap="round"
+                  stroke="#FF6464"
+                  stroke-width="1"
+                  fill-opacity="0"
+                  style="
+                    stroke-dasharray: 79.2px, 100px;
+                    stroke-dashoffset: 0px;
+                    transition: stroke-dashoffset 0.3s ease 0s,
+                      stroke-dasharray 0.3s ease 0s, stroke 0.3s linear 0s,
+                      0.06s;
+                  "
+                ></path>
+              </svg>
+            </div>
 
-          <!-- Familiar -->
-          <h3 class="fs-4 mt-4">Familiar:</h3>
-          <div class="d-flex flex-wrap gap-2 ms-md-4 mt-2">
-            <span class="badge fs-5 text-bg-info">Node.js</span>
-            <span class="badge fs-5 text-bg-info">Express.js</span>
-            <span class="badge fs-5 text-bg-info">MongoDB</span>
-            <span class="badge fs-5 text-bg-info">Python</span>
-          </div>
-
-          <!-- Tools -->
-          <h3 class="fs-4 mt-4">Tools:</h3>
-          <div class="d-flex flex-wrap gap-2 ms-md-4 mt-2">
-            <span class="badge fs-5 text-bg-info">VS Code</span>
-            <span class="badge fs-5 text-bg-info">Git</span>
-            <span class="badge fs-5 text-bg-info">GitHub</span>
-            <span class="badge fs-5 text-bg-info">Figma</span>
+            <div class="mb-7">
+              <div class="flex justify-between py-1">
+                <span
+                  class="text-base text-gray-lite font-semibold dark:text-[#A6A6A6]"
+                >
+                  Django | Django REST Framework (DRF) | MySQL
+                </span>
+                <span
+                  class="text-base font-semibold text-gray-lite pr-5 dark:text-[#A6A6A6]"
+                  >75%</span
+                >
+              </div>
+              <svg
+                class="rc-progress-line"
+                viewBox="0 0 100 1"
+                preserveAspectRatio="none"
+              >
+                <path
+                  class="rc-progress-line-trail"
+                  d="M 0.5,0.5
+         L 99.5,0.5"
+                  stroke-linecap="round"
+                  stroke="#D9D9D9"
+                  stroke-width="1"
+                  fill-opacity="0"
+                ></path>
+                <path
+                  class="rc-progress-line-path"
+                  d="M 0.5,0.5
+         L 99.5,0.5"
+                  stroke-linecap="round"
+                  stroke="#CA56F2"
+                  stroke-width="1"
+                  fill-opacity="0"
+                  style="
+                    stroke-dasharray: 74.25px, 100px;
+                    stroke-dashoffset: 0px;
+                    transition: stroke-dashoffset 0.3s ease 0s,
+                      stroke-dasharray 0.3s ease 0s, stroke 0.3s linear 0s,
+                      0.06s;
+                  "
+                ></path>
+              </svg>
+            </div>
+            <div class="mb-7">
+              <div class="flex justify-between py-1">
+                <span
+                  class="text-base text-gray-lite font-semibold dark:text-[#A6A6A6]"
+                  >REST API development | Git & GitHub | Basic Data Structures &
+                  Algorithms</span
+                >
+                <span
+                  class="text-base font-semibold text-gray-lite pr-5 dark:text-[#A6A6A6]"
+                  >65%</span
+                >
+              </div>
+              <svg
+                class="rc-progress-line"
+                viewBox="0 0 100 1"
+                preserveAspectRatio="none"
+              >
+                <path
+                  class="rc-progress-line-trail"
+                  d="M 0.5,0.5
+         L 99.5,0.5"
+                  stroke-linecap="round"
+                  stroke="#D9D9D9"
+                  stroke-width="1"
+                  fill-opacity="0"
+                ></path>
+                <path
+                  class="rc-progress-line-path"
+                  d="M 0.5,0.5
+         L 99.5,0.5"
+                  stroke-linecap="round"
+                  stroke="#5185D4"
+                  stroke-width="1"
+                  fill-opacity="0"
+                  style="
+                    stroke-dasharray: 64.35px, 100px;
+                    stroke-dashoffset: 0px;
+                    transition: stroke-dashoffset 0.3s ease 0s,
+                      stroke-dasharray 0.3s ease 0s, stroke 0.3s linear 0s,
+                      0.06s;
+                  "
+                ></path>
+              </svg>
+            </div>
           </div>
         </div>
 
         <!-- Education -->
-        <div class="col-12 col-md-6 text-white">
-          <h2 class="text-center fs-2">My Education</h2>
-          <div class="mx-auto hr"></div>
-          <div class="text-center mt-4">
-            <h3 class="fs-4">Diploma in Computer Science & Technology</h3>
-            <h4 class="fs-5">Feni Polytechnic Institute</h4>
-            <p class="fs-6">Feni, Bangladesh | 2021 - 2025</p>
+        <div class="space-y-6 text-white text-center">
+          <h2 class="text-3xl font-bold">My Education</h2>
+          <div class="mx-auto my-2 w-24 h-1 bg-blue-500 rounded"></div>
+          <div class="mt-6">
+            <h3 class="text-xl font-semibold">
+              Diploma in Computer Science & Technology
+            </h3>
+            <h4 class="text-lg mt-1">Feni Polytechnic Institute</h4>
+            <p class="text-base mt-1">Feni, Bangladesh | 2021 - 2025</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- contact  -->
+    <!-- Projects -->
+    <section id="portfolio" class="py-10">
+      <h2 class="text-center text-white text-3xl font-bold">Projects</h2>
+      <div class="mx-auto my-2 w-24 h-1 bg-blue-500 rounded"></div>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mt-10 px-4"
+      >
+        <!-- Project 1: E-Manager -->
+        <div
+          class="bg-gray-800 rounded-lg shadow-lg p-6 hover:scale-[1.02] transition-transform duration-300"
+        >
+          <h3 class="text-xl font-semibold text-white mb-2">
+            E-Manager — Role-Based Event Management System
+          </h3>
+          <p class="text-base text-blue-400 font-mono mb-3">
+            Django, SQLite/PostgreSQL, Tailwind CSS
+          </p>
+          <ul class="list-disc list-inside text-gray-300 text-base space-y-1">
+            <li>
+              Built a role-based event management system with Admin, Organizer,
+              and Participant roles.
+            </li>
+            <li>
+              Implemented secure authentication, access control, and email
+              notifications using Django.
+            </li>
+            <li>
+              Developed event creation, RSVP, and category management features.
+            </li>
+            <li>
+              Designed a responsive frontend with HTML, CSS, and Tailwind CSS.
+            </li>
+            <li>
+              Integrated email notification system for user registration and
+              RSVP confirmations.
+            </li>
+          </ul>
+          <a
+            href="https://github.com/Aru-01/Event-Management"
+            target="_blank"
+            class="inline-block mt-4 text-blue-400 hover:text-blue-300 text-base font-semibold"
+            >🔗 View Code</a
+          >
+        </div>
+
+        <!-- Project 2: User Authentication API -->
+        <div
+          class="bg-gray-800 rounded-lg shadow-lg p-6 hover:scale-[1.02] transition-transform duration-300"
+        >
+          <h3 class="text-xl font-semibold text-white mb-2">
+            User Authentication API
+          </h3>
+          <p class="text-base text-blue-400 font-mono mb-3">
+            Django REST Framework, JWT, Email OTP
+          </p>
+          <ul class="list-disc list-inside text-gray-300 text-base space-y-1">
+            <li>
+              Built RESTful authentication APIs with JWT for login/logout.
+            </li>
+            <li>
+              Implemented email OTP verification for user registration and
+              activation.
+            </li>
+            <li>
+              Exposed <code>/users</code> endpoint showing only active users
+              (auth protected).
+            </li>
+            <li>
+              Allowed profile update only for authenticated owners (read-only
+              for others).
+            </li>
+          </ul>
+          <a
+            href="https://github.com/Aru-01/Attachment-Projects/tree/main/User-Authentication"
+            target="_blank"
+            class="inline-block mt-4 text-blue-400 hover:text-blue-300 text-base font-semibold"
+            >🔗 View Code</a
+          >
+        </div>
+
+        <!-- Project 3: PhiMart -->
+        <div
+          class="bg-gray-800 rounded-lg shadow-lg p-6 hover:scale-[1.02] transition-transform duration-300 md:col-span-2"
+        >
+          <h3 class="text-xl font-semibold text-white mb-2">
+            PhiMart — E-Commerce Platform
+            <span class="text-red-400">(In Progress)</span>
+          </h3>
+          <p class="text-base text-blue-400 font-mono mb-3">
+            Django, Django REST Framework, JWT
+          </p>
+          <ul class="list-disc list-inside text-gray-300 text-base space-y-1">
+            <li>
+              Developed Users, Products, and Orders apps for a role-based
+              e-commerce system.
+            </li>
+            <li>
+              Implemented nested routing for product details
+              (<code>/product/12</code>) and basic cart functionality.
+            </li>
+            <li>
+              Built APIs for adding products to cart and placing orders
+              <span class="font-bold">(50% completed)</span>.
+            </li>
+            <li>
+              Gained experience in RESTful API design, database modeling, and
+              backend integration.
+            </li>
+          </ul>
+          <a
+            href="https://github.com/Aru-01/Attachment-Projects/tree/main/Phi_mart"
+            target="_blank"
+            class="inline-block mt-4 text-blue-400 hover:text-blue-300 text-base font-semibold"
+            >🔗 View Code</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
     <section
       id="contact"
-      style="margin-top: 6rem"
-      class="py-5 mx-auto text-white"
+      class="px-6 py-12 rounded-2xl text-white bg-gray-900 container mx-auto shadow-lg"
     >
-      <div class="">
-        <h2 class="text-center fs-2">Contact with me</h2>
-        <div class="mx-auto mb-4 hr"></div>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <form>
-              <div class="mb-3">
-                <label for="name" class="form-label fs-5"
-                  >Enter Your Name</label
-                >
-                <input
-                  type="text"
-                  class="form-control fs-6"
-                  id="name"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label fs-5"
-                  >Enter Your Email Address</label
-                >
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email"
-                  placeholder="example@mail.com"
-                  required
-                />
-              </div>
-              <div class="mb-3">
-                <label for="message" class="form-label fs-5"
-                  >Enter Your Message</label
-                >
-                <textarea
-                  class="form-control"
-                  id="message"
-                  rows="5"
-                  placeholder="Your message here..."
-                  required
-                ></textarea>
-              </div>
-              <div class="text-center">
-                <button
-                  type="submit"
-                  class="btn btn-info text-dark w-100 px-4 fs-5"
-                >
-                  Send
-                </button>
-              </div>
-            </form>
+      <h2 class="text-3xl font-bold text-center mb-2">Contact with Me</h2>
+      <div class="mx-auto my-2 w-24 h-1 bg-blue-500 rounded"></div>
+
+      <div
+        class="mt-8 max-w-3xl mx-auto bg-gray-800 p-8 rounded-lg shadow-inner"
+      >
+        <form
+          id="contact-form"
+          class="space-y-6"
+          action="mailto:dev.aru.0012@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <div>
+            <label for="name" class="block mb-2 text-lg font-medium"
+              >Your Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              placeholder="Your Name"
+              required
+              class="w-full px-4 py-3 text-black rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
           </div>
-        </div>
+          <div>
+            <label for="email" class="block mb-2 text-lg font-medium"
+              >Your Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              placeholder="example@mail.com"
+              required
+              class="w-full px-4 py-3 text-black rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+          <div>
+            <label for="message" class="block mb-2 text-lg font-medium"
+              >Your Message</label
+            >
+            <textarea
+              id="message"
+              rows="5"
+              placeholder="Your message here..."
+              required
+              class="w-full px-4 py-3 text-black rounded-lg text-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full bg-blue-500 text-white py-3 rounded-lg text-lg font-semibold hover:bg-blue-600 transition"
+          >
+            Send Message
+          </button>
+        </form>
       </div>
     </section>
-    <!-- contact end -->
-    <hr class="text-white" style="margin: 6rem 0" />
-    <!-- footer part end -->
-    <footer class="text-white text-center">
-      <h4 class="mb-3">
+
+    <!-- Footer -->
+    <footer class="text-center text-white py-12">
+      <h4 class="mb-3 text-lg">
         Copyright <i class="fa-regular fa-copyright"></i> 2025 | Ariful Islam
       </h4>
-      <h5 class="mb-3">Feni, Bangladesh</h5>
-      <p class="mb-3 d-flex gap-5 align-items-center justify-content-center">
-        <a class="text-white" href="https://github.com/Aru-01" target="_blank">
-          <i class="fa-brands fa-github fs-2 hover-effect"></i>
+      <h5 class="mb-3 text-lg">Feni, Bangladesh</h5>
+      <div class="flex justify-center items-center gap-10">
+        <a
+          href="https://github.com/Aru-01"
+          target="_blank"
+          class="hover:text-blue-400"
+        >
+          <i class="fab fa-github text-3xl"></i>
         </a>
-        <a class="text-white" href="https://www.linkedin.com/in/aru01/" target="_blank">
-          <i class="fa-brands fa-linkedin fs-2 hover-effect"></i>
+        <a
+          href="https://www.linkedin.com/in/aru01/"
+          target="_blank"
+          class="hover:text-blue-400"
+        >
+          <i class="fab fa-linkedin text-3xl"></i>
         </a>
-        <a class="text-white" href="https://www.facebook.com/Aru.0012/" target="_blank">
-          <i class="fa-brands fa-facebook fs-2 hover-effect"></i>
+        <a
+          href="https://www.facebook.com/Aru.0012/"
+          target="_blank"
+          class="hover:text-blue-400"
+        >
+          <i class="fab fa-facebook text-3xl"></i>
         </a>
-      </p>
+      </div>
     </footer>
-    <!-- footer part end -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-      crossorigin="anonymous"
-    ></script>
+    <script>
+      const navToggle = document.getElementById("nav-toggle");
+      const navMenu = document.getElementById("nav-menu");
+
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("hidden");
+      });
+      const form = document.getElementById("contact-form");
+
+      form.addEventListener("submit", function () {
+        setTimeout(() => {
+          form.reset();
+        }, 100);
+      });
+    </script>
   </body>
 </html>
